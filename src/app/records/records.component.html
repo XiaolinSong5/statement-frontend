@@ -1,0 +1,19 @@
+<table class="tableblock frame-all grid-all spread">
+  <caption class="title">Table 1. Record description</caption>
+  <colgroup>
+    <col style="width: 50%;">
+    <col style="width: 50%;">
+  </colgroup>
+  <thead>
+  <tr>
+    <th class="tableblock halign-left valign-top">Field</th>
+    <th class="tableblock halign-left valign-top">Description</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let record of records">
+    <td class="tableblock halign-left valign-top"><p class="tableblock">{{record.reference}}</p></td>
+    <td class="tableblock halign-left valign-top"><p class="tableblock">{{record.description}}</p></td>
+  </tr>
+  </tbody>
+</table>
