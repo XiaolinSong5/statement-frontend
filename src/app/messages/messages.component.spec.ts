@@ -9,16 +9,17 @@ describe('MessagesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessagesComponent , MessageService]
+      declarations: [ MessagesComponent ,
+        MessageService]
     })
     .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MessagesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  // beforeEach(() => {
+  //   fixture = TestBed.createComponent(MessagesComponent);
+  //   component = fixture.componentInstance;
+  //   fixture.detectChanges();
+  // });
 
   it('should create', () => {
     expect(component).toBeTruthy();
