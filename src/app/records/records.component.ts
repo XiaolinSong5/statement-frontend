@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Record } from '../record';
-import { Symptom } from '../symptom.model';
 import { RECORDS } from '../mock-records';
 import { RecordService} from '../record.service';
 
@@ -12,7 +11,6 @@ import { RecordService} from '../record.service';
 })
 export class RecordsComponent implements OnInit {
   records: Record[];
-  //records: Symptom[];
 
   constructor(private  recordService: RecordService) { }
 

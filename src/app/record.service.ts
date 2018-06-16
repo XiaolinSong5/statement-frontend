@@ -3,8 +3,8 @@ import { Record } from './record';
 import { RECORDS } from './mock-records';
 import { Observable} from 'rxjs';
 import {of} from "rxjs/observable/of";
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-@Injectable({providedIn: 'root'})
+import { HttpClient} from '@angular/common/http';
+@Injectable()
 export class RecordService {
   private recordsUrl = 'http://localhost:8080/';  // URL to web api
 
