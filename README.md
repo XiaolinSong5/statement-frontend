@@ -32,6 +32,16 @@ Run `ng serve` for a dev server. The app will automatically reload if you change
 
 To open the application in de browser, open http://localhost:4200
 
+
+### TEST
+If you can successful op the page for any reason, you can also try to use the mockdata
+In record.service.ts 
+enable the line: return of(RECORDS);
+and disable the line  //return this.http.get<Record[]>(this.recordsUrl);
+
+The result page is like the example pages in de root:
+resultpageonlinoutput.pdf of resultpagewithinputexample.pdf
+
 ### Root files
 A lot of files exist in the project's root. Here's what they're used for:
 
