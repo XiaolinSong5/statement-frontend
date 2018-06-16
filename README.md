@@ -42,6 +42,10 @@ and disable the line  //return this.http.get<Record[]>(this.recordsUrl);
 The result page is like the example pages in de root:
 resultpageonlinoutput.pdf of resultpagewithinputexample.pdf
 
+### Message
+if the processing goes wrong, the error message of some other message can be shown at the end of the page.
+With button "clear" you can clear the messages.
+
 ### Root files
 A lot of files exist in the project's root. Here's what they're used for:
 
@@ -50,17 +54,11 @@ A lot of files exist in the project's root. Here's what they're used for:
 | .angular-cli.json   | Configuration file for angular-cli, see https://github.com/angular/angular-cli/wiki/angular-cli |
 | .editorconfig       | For consisting coding styles between editors and IDEs, see http://editorconfig.org |
 | .npmrc              | npm configuration file, for proxy, repository, etc. settings |
-| cypress.json        | file with environment variables for running tests with cypress |
-| Jenkinsfile         | Script of the build pipeline in Jenkins **DEPRECATED** |
 | karma.conf.js       | test config |
 | package-lock.json   | describes the exact tree that was generated, such that subsequent installs are able to generate 
-                        identical trees, regardless of intermediate dependency updates |
-| pom.xml             | contains dependency and build information to create a dar-file, which is used by XL Deploy |                   
-| proxy.conf.json     | proxy configuration for webpack during local testing |
-| sonar-project.properties | property file used by sonar when running the analysis **DEPRECATED**|
+                        identical trees, regardless of intermediate dependency updates |                  
 | tsconfig.json       | typescript compiler config |
 | tslint.json         | typescript format and code check config |
-| typings.json        | typescript definition manager, see https://github.com/typings/typings |
 
 ## Build
 

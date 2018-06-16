@@ -2,12 +2,14 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {RecordsComponent} from './records/records.component';
 import {RecordService} from "./record.service";
+import {MessagesComponent} from "./messages/messages.component";
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        RecordsComponent
+        RecordsComponent,
+        MessagesComponent
       ],
       providers: [RecordService]
     }).compileComponents();

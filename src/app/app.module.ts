@@ -7,19 +7,23 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { RecordsComponent } from './records/records.component';
 import {RecordService} from "./record.service";
+import { MessagesComponent } from './messages/messages.component';
+import {MessageService} from "./message.service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecordsComponent
+    RecordsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule
   ],
-  providers: [RecordService],
+  providers: [RecordService,
+  MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
