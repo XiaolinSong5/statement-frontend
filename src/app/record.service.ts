@@ -19,7 +19,7 @@ export class RecordService {
   }
   getRecords(): Observable<Record[]> {
     //return of(RECORDS);
-    this.messageService.add('RecordService: fetched records')
+    this.messageService.add('RecordService: fetched records');
     return this.http.get<Record[]>(this.recordsUrl)
       .pipe(
         catchError(this.handleError('getRecords', []))

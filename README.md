@@ -12,20 +12,20 @@ Run `ng generate component component-name` to generate a new component. You can 
 `ng generate directive|pipe|service|class|module`.
 
 ### Development setup
-It's handy to have an editor which can compile .ts files real-time:
+It's handy to have an editor which can compile .ts files real-time, for example:
 
 * IntelliJ Ultimate
 * SublimeText (add plugin: https://packagecontrol.io/packages/TypeScript)
 * Brackets (add plugin: http://brackets.dnbard.com/extension/brackets-typescript)
 
-You need some programs to run this project locally:
+You need some programs or tools to run this project locally:
 
 * NPM (version 3 or higher) and NodeJs (version 6 or higher)
 * Angular client (check version in package.json): 
 * Install all the node modules, run: `npm install`
 
 ## Development server
-To run this project, first run the back-end applicatie statement-backend, because it requests some information which is shown on the front
+To run this project, first run the back-end applicatie statement-backend (http://localhost:8080)), because it requests some information which is shown on the front
 end.
 Run `ng serve` for a dev server. The app will automatically reload if you change any of the source files.
 
