@@ -1,5 +1,4 @@
 import { RecordService } from './record.service';
-import { MessageService } from './message.service';
 import { TestBed, async, inject } from '@angular/core/testing';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
@@ -10,7 +9,6 @@ describe("RecordService", () => {
     // 0. set up the test environment
     TestBed.configureTestingModule({
       imports: [
-        // no more boilerplate code w/ custom providers needed :-)
         HttpClientModule,
         HttpClientTestingModule
       ]
