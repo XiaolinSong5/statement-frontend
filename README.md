@@ -27,10 +27,10 @@ You need some programs or tools to run this project locally:
 ## Development server
 To run this project, first run the back-end applicatie statement-backend (http://localhost:8080)), because it requests some information which is shown on the front
 end.
-Run `ng serve` for a dev server. The app will automatically reload if you change any of the source files.
+Run `ng serve --open` for a dev server. The app will automatically reload if you change any of the source files.
 
 
-To open the application in de browser, open http://localhost:4200
+You can also open the application manually in de browser, open http://localhost:4200
 
 
 ### TEST
