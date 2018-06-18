@@ -34,11 +34,17 @@ You can also open the application manually in de browser, open http://localhost:
 
 
 ### TEST
-If you can successful op the page for any reason, you can also try to use the mockdata
+If you can not successful open the page for any reason, you can also try to use the mockdata
 In record.service.ts 
-enable the line: return of(RECORDS);
-and disable the line  //return this.http.get<Record[]>(this.recordsUrl);
-
+ this.messageService.add('RecordService: fetched records');
+     return of(RECORDS)
+       .pipe(
+         catchError(this.handleError('getRecords', []))
+       );
+  //  return this.http.get<Record[]>(this.recordsUrl)
+   //   .pipe(
+    //    catchError(this.handleError('getRecords', []))
+   //   );
 The result page is like the example pages in de root:
 resultpageonlinoutput.pdf of resultpagewithinputexample.pdf
 
