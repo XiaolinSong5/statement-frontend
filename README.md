@@ -30,7 +30,7 @@ end.
 Run `ng serve --open` for a dev server. The app will automatically reload if you change any of the source files.
 
 
-You can also open the application manually in de browser, open http://localhost:4200
+You can also open the application manually in de browser: http://localhost:4200
 
 
 ### TEST
@@ -49,7 +49,7 @@ The result page is like the example pages in de root:
 resultpageonlinoutput.pdf of resultpagewithinputexample.pdf
 
 ### Message
-if the processing goes wrong, the error message of some other message can be shown at the end of the page.
+if the processing goes wrong, the error message or some other message can be shown at the end of the page.
 With button "clear" you can clear the messages.
 
 ### Root files
