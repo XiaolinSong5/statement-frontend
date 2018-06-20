@@ -8,13 +8,15 @@ import { RecordsComponent } from './records/records.component';
 import {RecordService} from "./record.service";
 import { MessagesComponent } from './messages/messages.component';
 import {MessageService} from "./message.service";
+import { RecordDetailComponent } from './record-detail/record-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RecordsComponent,
-    MessagesComponent
+    MessagesComponent,
+    RecordDetailComponent
   ],
   imports: [
     BrowserModule,

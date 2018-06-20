@@ -17,10 +17,4 @@
   </tr>
   </tbody>
 </table>
-<h2>{{ selectedRecord.description | uppercase }} Details</h2>
-<div><span>reference: </span>{{selectedRecord.reference}}</div>
-<div *ngIf="selectedRecord">
-  <label>name:
-    <input [(ngModel)]="selectedRecord.description" placeholder="description">
-  </label>
-</div>
+<app-record-detail [record]="selectedRecord"></app-record-detail>
