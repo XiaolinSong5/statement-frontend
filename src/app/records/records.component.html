@@ -11,9 +11,16 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let record of records">
+  <tr *ngFor="let record of records" (click)="onSelect(record)">
     <td class="tableblock halign-left valign-top"><p class="tableblock">{{record.reference}}</p></td>
     <td class="tableblock halign-left valign-top"><p class="tableblock">{{record.description}}</p></td>
   </tr>
   </tbody>
 </table>
+<h2>{{ selectedRecord.description | uppercase }} Details</h2>
+<div><span>reference: </span>{{selectedRecord.reference}}</div>
+<div *ngIf="selectedRecord">
+  <label>name:
+    <input [(ngModel)]="selectedRecord.description" placeholder="description">
+  </label>
+</div>

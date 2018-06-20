@@ -11,6 +11,7 @@ import { RecordService} from '../record.service';
 })
 export class RecordsComponent implements OnInit {
   records: Record[];
+  selectedRecord: Record;
 
   constructor(private  recordService: RecordService) { }
 
@@ -20,5 +21,8 @@ export class RecordsComponent implements OnInit {
   getRecords(): void {
     this.recordService.getRecords()
       .subscribe(records => this.records = records);
+  }
+  onSelect(record: Record): void {
+    this.selectedRecord = record;
   }
 }
