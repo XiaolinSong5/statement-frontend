@@ -9,6 +9,7 @@ import {RecordService} from "./record.service";
 import { MessagesComponent } from './messages/messages.component';
 import {MessageService} from "./message.service";
 import { RecordDetailComponent } from './record-detail/record-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { RecordDetailComponent } from './record-detail/record-detail.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [RecordService,
   MessageService],

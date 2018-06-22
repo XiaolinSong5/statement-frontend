@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Record } from './record';
 import { RECORDS } from './mock-records';
-import { Observable} from 'rxjs';
-import {of} from "rxjs/observable/of";
+import { Observable, of } from 'rxjs';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { MessageService } from './message.service';
 
-import { catchError } from 'rxjs/operators';
+import {catchError, tap} from 'rxjs/operators';
 
 
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class RecordService {
   private recordsUrl = 'http://localhost:8080/';  // URL to web api
 
@@ -23,10 +22,18 @@ export class RecordService {
     //   .pipe(
     //     catchError(this.handleError('getRecords', []))
     //   );
-    return this.http.get<Record[]>(this.recordsUrl)
-      .pipe(
-        catchError(this.handleError('getRecords', []))
-      );
+
+
+      return this.http.get<Record[]>(this.recordsUrl)
+        .pipe(
+          tap(heroes => this.log(`fetched records`)),
+          catchError(this.handleError('getRecords', []))
+        );
+
+    // return this.http.get<Record[]>(this.recordsUrl)
+    //   .pipe(
+    //     catchError(this.handleError('getRecords', []))
+    //   );
   }
   /**
    * Handle Http operation that failed.
