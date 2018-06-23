@@ -1,8 +1,9 @@
 <div *ngIf="record">
 <h2>{{ record.description | uppercase }} Details</h2>
 <div><span>reference: </span>{{record.reference}}</div>
-
-  <label>name:
+<div>
+  <label>description:
     <input [(ngModel)]="record.description" placeholder="description">
   </label>
+</div>
 </div>

@@ -12,6 +12,7 @@ import {catchError, tap} from 'rxjs/operators';
 @Injectable({ providedIn: 'root' })
 export class RecordService {
   private recordsUrl = 'http://localhost:8080/';  // URL to web api
+  private xmlrecordsUrl = this.recordsUrl + 'xmlrecords';
 
 
   constructor(private http: HttpClient, private messageService: MessageService) {
@@ -24,9 +25,9 @@ export class RecordService {
     //   );
 
 
-      return this.http.get<Record[]>(this.recordsUrl)
+      return this.http.get<Record[]>(this.xmlrecordsUrl)
         .pipe(
-          tap(heroes => this.log(`fetched records`)),
+          tap(records => this.log(`fetched records`)),
           catchError(this.handleError('getRecords', []))
         );
 
@@ -35,6 +36,16 @@ export class RecordService {
     //     catchError(this.handleError('getRecords', []))
     //   );
   }
+
+  getRecord(reference: number): Observable<Record> {
+    const url = `${this.xmlrecordsUrl}/${reference}`;
+    let a = this.http.get<Record>(url);
+    return this.http.get<Record>(url).pipe(
+      tap(_ => this.log(`fetched record reference=${reference}`)),
+      catchError(this.handleError<Record>(`getRecord reference=${reference}`))
+    );
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

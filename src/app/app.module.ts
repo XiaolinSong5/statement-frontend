@@ -9,6 +9,7 @@ import {RecordService} from "./record.service";
 import { MessagesComponent } from './messages/messages.component';
 import {MessageService} from "./message.service";
 import { RecordDetailComponent } from './record-detail/record-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 
 
@@ -17,7 +18,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     RecordsComponent,
     MessagesComponent,
-    RecordDetailComponent
+    RecordDetailComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

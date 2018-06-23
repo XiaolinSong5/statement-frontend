@@ -1,0 +1,9 @@
+<h3>Top Records</h3>
+<div>
+  <a *ngFor="let record of records"
+    routerLink="/detail/{{record.reference}}">
+    <div>
+      <h4>{{record.description}}</h4>
+    </div>
+  </a>
+</div>

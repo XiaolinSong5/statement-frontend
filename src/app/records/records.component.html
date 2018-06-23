@@ -11,10 +11,12 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let record of records" (click)="onSelect(record)">
+  <tr *ngFor="let record of records">
+    <a routerLink="/detail/{{record.reference}}">
     <td class="tableblock halign-left valign-top"><p class="tableblock">{{record.reference}}</p></td>
     <td class="tableblock halign-left valign-top"><p class="tableblock">{{record.description}}</p></td>
+    </a>
   </tr>
+
   </tbody>
 </table>
-<app-record-detail [record]="selectedRecord"></app-record-detail>
